@@ -162,6 +162,9 @@ body {
       border-radius: 25px;
       color: #fff;
       padding: 5px 30px; }
+      .ba-love__text button a{
+        color: #fff;
+      }
     .ba-love__text h3 {
       font-size: 20px;
       color: #fff;
