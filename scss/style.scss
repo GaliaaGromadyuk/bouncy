@@ -1,0 +1,262 @@
+$title-color: #333b46;
+$text-color: #81868e;
+$color: #464646;
+$title-font: 'Source Sans Pro', sans-serif;
+
+@mixin title(){
+	margin: 60px auto;
+	width: 45%;
+	text-align: center;
+	& h2{
+	text-transform: uppercase;
+	}
+}
+
+h2{
+	font-size: 20px;
+	font-weight: 300;
+	letter-spacing: 4px;
+	line-height: 12px;
+	font-family: $title-font;
+	color: $title-color;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+body{
+	color:  #81868e;
+	font-size: 14px;
+	line-height: 25px;
+	font-family: 'Open Sans', sans-serif;
+}
+.ba-header{
+	background: rgba(0, 0, 0, 0.5);
+	padding: 40px 7% 70px 7%;
+	color: #fff;
+	position: relative;
+	&__logo{
+		cursor: pointer;
+	}
+	&__bg{
+		position: absolute;
+		background: url('../img/Layer1.png');
+				width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: -1;
+	}
+	&__menu{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 170px;
+		&-container{
+			& ul{
+				padding: 0;
+				display:flex;
+				flex-direction: row;
+				& li{
+					list-style: none;
+					padding: 9px 24px;
+					font-size: 16px;
+					line-height: 12px;
+					border: 1px solid transparent;
+					&:hover{
+						border: 1px solid #fff;
+						border-radius: 25px;
+					}
+					& a{
+						text-decoration: none;
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	&__text{
+		width: 50%;
+		margin: 0px auto;
+		text-align: center;
+		margin-bottom: 200px;
+		& h1{
+			font-size: 35px;
+			font-weight: 300;
+			letter-spacing: 7px;
+			line-height: 70px;
+			font-family: $title-font;
+			text-transform: uppercase;
+		}
+		& h3{
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 28px;
+		}
+	}
+	&__scroll{
+		border-radius: 50%;
+		background-color:  #19bd9a;
+		width: 36px;
+		height: 36px;
+		margin: 0 auto;
+		position: relative;
+		& i{
+			font-size: 20px;
+			position: absolute;
+			top: 20%;
+			left: 30%;
+			color: #fff;
+		}
+	}
+}
+
+
+
+.ba-portfolio{
+	background: #f3f3f3;
+	padding: 90px 9%;
+	position: relative;
+	width: 100%;
+	&__title{
+		@include title();
+		& h2{
+			margin: 0;
+		}
+	}
+}
+.button-group{
+	width: 30%;
+	margin: 70px auto;
+	display: flex;
+	justify-content: space-between;
+	& button{
+		border: none;
+		background: none;
+		color: $color;
+		font-size: 16px;
+		border-bottom: 1.5px solid transparent;
+		&:focus {
+			outline: none;
+			border-bottom: 1.5px solid #19bd9a;
+		}
+		&:hover{
+			outline: none;
+			border-bottom: 1.5px solid #19bd9a;
+		}
+	}
+}
+.grid{
+	margin: 0 auto;
+	&-item{
+		width: 24.5%;
+	}
+}
+
+.ba-team{
+	padding: 40px 12%;
+	&__title{
+		@include title();
+	}
+	&__slider{
+		&-item{
+			display:flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-direction: row;
+			& img{
+				float: left;
+			}
+			&-description{
+				width: 40%;
+				text-align: right;
+				float: right;
+				& h1{
+					font-size: 20px;
+					color: $color;
+					font-weight: 400;
+				}
+				& h3{
+					font-family: $title-font;
+					text-transform: uppercase;
+					letter-spacing: 1.4px;
+					margin-bottom: 30px;
+					font-style: italic;
+
+				}
+			}
+		}
+	}
+}
+
+.ba-love{
+	background-image: url('../img/Layer2.png');
+	text-align: center;
+	&__text{
+		padding: 50px 0px;
+		& button{
+			background: none;
+			border: 1px solid #fff;
+			border-radius: 25px;
+			color: #fff;
+			padding: 5px 30px;
+		}
+		& h3 {
+			font-size: 20px;
+			color: #fff;
+			font-weight: 400;
+		}
+	}
+}
+
+.ba-testimonials{
+	background: #f3f3f3;
+	position: relative;
+	padding: 60px 7%;
+	top: 0;
+	&__title{
+		@include title();
+		margin-top: 20px;
+	}
+	&__slider{
+		background: #fff;
+
+		&-item{
+			padding: 50px 100px 50px 100px;
+			& img{
+				width: 130px;
+				margin-bottom: 30px;
+				margin-right: 70px;
+				float:left;
+			}
+			& h3{
+				color: #19bd9a;
+				font-size: 16px;
+				margin-bottom: 0;
+			}
+			& h4 {
+				color: $color;
+				margin-top: 0;
+				font-weight: 400;
+			}
+		}
+	}
+}
+.ba-contact{
+	padding: 20px 7%;
+	&__title{
+		@include title();
+	}
+}
+
+#map {
+  height: 440px;
+  width: 100%;
+}
+
+.ba-footer #logo{
+	fill: rgb(0, 0, 0);
+	color: #000;
+}
